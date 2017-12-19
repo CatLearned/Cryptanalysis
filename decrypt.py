@@ -5,11 +5,11 @@ dict = {'А': 1, 'Б': 2, 'В': 3, 'Г': 4, 'Д': 5, 'Е': 6, 'Ж': 7, 'З': 8, 
 
 # Перевод символьного сообщения в цифровой код
 def messageToCode(message):
-    xarray = [None]
+    xarray = []
     length = len(message)
     ctr = 0
     while not ctr == length:
-        xarray.append = dict[message.charAt(ctr)]
+        xarray.append(dict[message[ctr]])
         ctr = ctr +1
     return xarray
 
