@@ -46,6 +46,24 @@ def summator(message, key):
 		itteratorK = itteratorK + 1
 	return message
 
+def deciminator(message1, message2, bkey):
+	lengthM1 = len(message1)
+	lengthM2 = len(message2)
+	# Увеличить размер сообщения
+	# Разделить вычитание с ключом и между двумя сообщениями
+	# Вынести алгоритм непосредственно вычитания в другую функцию
+	if (bkey == False):
+		if(lengthM1 < lengthM2):
+			buf = lengthM1
+			lengthM1 = lenguhM2
+			lengthM2 = 0
+		else:
+			lengthM2 = 0
+	itteratorM1 = 0
+	itteratorM2 = 0
+	#while not itterator
+	return 0
+
 print('-> Программа алгоритм с ключем')
 #cmd = input('-> dEscription or enCryption or keY: ')
 #if (cmd == 'c'):
