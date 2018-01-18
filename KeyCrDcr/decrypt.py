@@ -1,90 +1,100 @@
-# Объявление Алфавита
-import array
-# Словарь (Алфавит) Без буквы Ё
-Alp = {'А': 1, 'Б': 2, 'В': 3, 'Г': 4, 'Д': 5, 'Е': 6, 'Ж': 7, 'З': 8, 'И': 9, 'Й': 10, 'К': 11, 'Л': 12, 'М': 13, 'Н': 14, 'О': 15, 'П': 16, 'Р': 17, 'С': 18, 'Т': 19, 'У': 20, 'Ф': 21, 'Х':22, 'Ц':23, 'Ч':24, 'Ш':25, 'Щ':26, 'Ъ':27, 'Ы':28, 'Ь':29, 'Э':30, 'Ю':31, 'Я':32} #1-32
-Dic = ['А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'Й', 'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Х', 'Ц', 'Ч', 'Ш', 'Щ', 'Ъ', 'Ы', 'Ь', 'Э', 'Ю', 'Я'] #1-32
+# РћР±СЉСЏРІР»РµРЅРёРµ РђР»С„Р°РІРёС‚Р°
 
-# Буквенно-числовой Преобразователь №1
-# Вход: буквенное значение слова
-# Выход: числовая последовательность
+# РЎР»РѕРІР°СЂСЊ (РђР»С„Р°РІРёС‚) Р‘РµР· Р±СѓРєРІС‹ РЃ
+Alp = {'Рђ': 1, 'Р‘': 2, 'Р’': 3, 'Р“': 4, 'Р”': 5, 'Р•': 6, 'Р–': 7, 'Р—': 8, 'Р': 9, 'Р™': 10, 'Рљ': 11, 'Р›': 12, 'Рњ': 13,
+       'Рќ': 14, 'Рћ': 15, 'Рџ': 16, 'Р ': 17, 'РЎ': 18, 'Рў': 19, 'РЈ': 20, 'Р¤': 21, 'РҐ': 22, 'Р¦': 23, 'Р§': 24, 'РЁ': 25,
+       'Р©': 26, 'РЄ': 27, 'Р«': 28, 'Р¬': 29, 'Р­': 30, 'Р®': 31, 'РЇ': 32}  # 1-32
+Dic = ['Рђ', 'Р‘', 'Р’', 'Р“', 'Р”', 'Р•', 'Р–', 'Р—', 'Р', 'Р™', 'Рљ', 'Р›', 'Рњ', 'Рќ', 'Рћ', 'Рџ', 'Р ', 'РЎ', 'Рў', 'РЈ', 'Р¤', 'РҐ',
+       'Р¦', 'Р§', 'РЁ', 'Р©', 'РЄ', 'Р«', 'Р¬', 'Р­', 'Р®', 'РЇ']  # 1-32
+
+
+# Р‘СѓРєРІРµРЅРЅРѕ-С‡РёСЃР»РѕРІРѕР№ РџСЂРµРѕР±СЂР°Р·РѕРІР°С‚РµР»СЊ в„–1
+# Р’С…РѕРґ: Р±СѓРєРІРµРЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ СЃР»РѕРІР°
+# Р’С‹С…РѕРґ: С‡РёСЃР»РѕРІР°СЏ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ
 def SymToCode(message):
-	xarray = []
-	length = len(message)
-	ctr = 0
-	while not ctr == length:
-		xarray.append(Alp[message[ctr]])
-		ctr = ctr +1
-	return xarray
+    xarray = []
+    length = len(message)
+    ctr = 0
+    while not ctr == length:
+        xarray.append(Alp[message[ctr]])
+        ctr = ctr + 1
+    return xarray
 
-# Число-буквенный Преобразователь №2
-# Вход: числовая последовательность
-# Выход: буквенное значение слова
+
+# Р§РёСЃР»Рѕ-Р±СѓРєРІРµРЅРЅС‹Р№ РџСЂРµРѕР±СЂР°Р·РѕРІР°С‚РµР»СЊ в„–2
+# Р’С…РѕРґ: С‡РёСЃР»РѕРІР°СЏ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ
+# Р’С‹С…РѕРґ: Р±СѓРєРІРµРЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ СЃР»РѕРІР°
 def CodeToSym(imessage):
-	Sym = ''
-	length = len(imessage)
-	itterator = 0
-	while not itterator == length:
-		Sym = Sym + Dic[imessage[itterator] - 1]
-		itterator = itterator + 1
-	return Sym
+    Sym = ''
+    length = len(imessage)
+    itterator = 0
+    while not itterator == length:
+        Sym = Sym + Dic[imessage[itterator] - 1]
+        itterator = itterator + 1
+    return Sym
 
-# Числовой Сумматор №3
-# Вход: Пара числовых последовательностей
-# Выход: Сумма числовых последовательностей с основанием равным длине алфавита
+
+# Р§РёСЃР»РѕРІРѕР№ РЎСѓРјРјР°С‚РѕСЂ в„–3
+# Р’С…РѕРґ: РџР°СЂР° С‡РёСЃР»РѕРІС‹С… РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚РµР№
+# Р’С‹С…РѕРґ: РЎСѓРјРјР° С‡РёСЃР»РѕРІС‹С… РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚РµР№ СЃ РѕСЃРЅРѕРІР°РЅРёРµРј СЂР°РІРЅС‹Рј РґР»РёРЅРµ Р°Р»С„Р°РІРёС‚Р°
 def summator(message, key):
-	lengthM = len(message)
-	lengthK = len(key)
-	itteratorM = 0
-	itteratorK = 0	
-	while not itteratorM == lengthM:
-		if (itteratorK == lengthK):
-			itteratorK = 0; 
-		message[itteratorM] = message[itteratorM] + key[itteratorK]
-                message[itteratotM] = message[itteratotM] % 32
-		if(message[itteratorM] == 0):
-			message[itteratorM] = 32
-		itteratorM = itteratorM + 1
-		itteratorK = itteratorK + 1
-	return message
+    lengthM = len(message)
+    lengthK = len(key)
+    itteratorM = 0
+    itteratorK = 0
+    while not itteratorM == lengthM:
+        if itteratorK == lengthK:
+            itteratorK = 0
+        message[itteratorM] = message[itteratorM] + key[itteratorK]
+        message[itteratorM] = message[itteratorM] % 32
+        if message[itteratorM] == 0:
+            message[itteratorM] = 32
+        itteratorM = itteratorM + 1
+        itteratorK = itteratorK + 1
+    return message
 
-# Числовой Вычитатель
-# Вход: Сообщение1, сообщение2, является ли сообщение 2 ключом
-# Выход: Разница сообщений
+
+# Р§РёСЃР»РѕРІРѕР№ Р’С‹С‡РёС‚Р°С‚РµР»СЊ
+# Р’С…РѕРґ: РЎРѕРѕР±С‰РµРЅРёРµ1, СЃРѕРѕР±С‰РµРЅРёРµ2, СЏРІР»СЏРµС‚СЃСЏ Р»Рё СЃРѕРѕР±С‰РµРЅРёРµ 2 РєР»СЋС‡РѕРј
+# Р’С‹С…РѕРґ: Р Р°Р·РЅРёС†Р° СЃРѕРѕР±С‰РµРЅРёР№
 def deciminator(message1, message2, bkey):
-	lengthM1 = len(message1)
-	lengthM2 = len(message2)
-	# Увеличить размер сообщения
-	# Разделить вычитание с ключом и между двумя сообщениями
-	# Вынести алгоритм непосредственно вычитания в другую функцию
-	if (bkey == False):
-		if(lengthM1 < lengthM2):
-			buf = lengthM1
-			lengthM1 = lenguhM2
-			lengthM2 = 0
-		else:
-			lengthM2 = 0
-	itteratorM1 = 0
-	itteratorM2 = 0
-	#while not itterator
-	return 0
+    lengthM1 = len(message1)
+    lengthM2 = len(message2)
+    # РЈРІРµР»РёС‡РёС‚СЊ СЂР°Р·РјРµСЂ СЃРѕРѕР±С‰РµРЅРёСЏ
+    # Р Р°Р·РґРµР»РёС‚СЊ РІС‹С‡РёС‚Р°РЅРёРµ СЃ РєР»СЋС‡РѕРј Рё РјРµР¶РґСѓ РґРІСѓРјСЏ СЃРѕРѕР±С‰РµРЅРёСЏРјРё
+    # Р’С‹РЅРµСЃС‚Рё Р°Р»РіРѕСЂРёС‚Рј РЅРµРїРѕСЃСЂРµРґСЃС‚РІРµРЅРЅРѕ РІС‹С‡РёС‚Р°РЅРёСЏ РІ РґСЂСѓРіСѓСЋ С„СѓРЅРєС†РёСЋ
+    if (bkey == False):
+        if (lengthM1 < lengthM2):
+            buf = lengthM1
+            lengthM1 = lengthM2
+            lengthM2 = 0
+        else:
+            lengthM2 = 0
+    itteratorM1 = 0
+    itteratorM2 = 0
+    # while not itterator
+    return 0
 
-print('-> Программа алгоритм с ключем')
-#cmd = input('-> dEscription or enCryption or keY: ')
-#if (cmd == 'c'):
-mesg = input('-> Введите сообщение: ')
+
+print('-> РџСЂРѕРіСЂР°РјРјР° Р°Р»РіРѕСЂРёС‚Рј СЃ РєР»СЋС‡РµРј')
+# cmd = input('-> dEscription or enCryption or keY: ')
+# if (cmd == 'c'):
+mesg = input('-> Р’РІРµРґРёС‚Рµ СЃРѕРѕР±С‰РµРЅРёРµ: ')
+mesg = mesg.upper()
 imesg = SymToCode(mesg)
-imesg = imesg.upper()
-print('-> Числовой вид сообщения: ', imesg)
-key = input('-> Введите ключ: ')
+
+print('-> Р§РёСЃР»РѕРІРѕР№ РІРёРґ СЃРѕРѕР±С‰РµРЅРёСЏ: ', imesg)
+key = input('-> Р’РІРµРґРёС‚Рµ РєР»СЋС‡: ')
+key = key.upper()
 ikey = SymToCode(key)
-print('-> Числовой вид ключа: ', ikey)
+print('-> Р§РёСЃР»РѕРІРѕР№ РІРёРґ РєР»СЋС‡Р°: ', ikey)
 ires = summator(imesg, ikey)
 res = CodeToSym(ires)
-print('-> Результат шифрования: ', res)
-print('-> Числовой Результат Ключевого шифрования: ', ires)
-input('-> Конец!')
-#elif (cmd == 'e'):
+print('-> Р РµР·СѓР»СЊС‚Р°С‚ С€РёС„СЂРѕРІР°РЅРёСЏ: ', res)
+print('-> Р§РёСЃР»РѕРІРѕР№ Р РµР·СѓР»СЊС‚Р°С‚ РљР»СЋС‡РµРІРѕРіРѕ С€РёС„СЂРѕРІР°РЅРёСЏ: ', ires)
+input('-> РљРѕРЅРµС†!')
+# elif (cmd == 'e'):
 #    print('hi')
-#elif (cmd == 'y'):
+# elif (cmd == 'y'):
 #    print('hi')
-#else: print('-> Неверная команда')
+# else: print('-> РќРµРІРµСЂРЅР°СЏ РєРѕРјР°РЅРґР°')
