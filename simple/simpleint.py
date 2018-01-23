@@ -14,7 +14,7 @@ while True:
 
     if simple:
         print('Обнаружено простое число ', current)
-        f = open(name, "a")
+        f = open('./' + name, "a")
         f.write(str(current) + '\n')
         f.close()
 
