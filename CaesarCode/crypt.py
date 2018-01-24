@@ -1,21 +1,22 @@
-#Не тестировано!!!
+# Не тестировано!!!
 import modularArithmetic
 import alpEng
 
 print("Шифр Цезаря")
 mesg = input('-> Введите сообщение: ')
-mesg = mesg.ToUpper().replace(' ', '')
+mesg = mesg.upper().replace(' ', '')
 key = input('-> Ключ символ: ')
-key = key[0].ToUpper()
+key = key[0].upper()
 
 slength = len(mesg)
-keycode = alpEng.Alp(key[0])
+keycode = alpEng.Alp[key]
 it = 0
 res = ''
 
 while not it == slength:
-    scode = alpEng.Alp(mesg[it])
+    scode = alpEng.Alp[mesg[it]]
     rcode = modularArithmetic.modularsumm(scode, keycode, alpEng.Length)
     res = res + alpEng.Dic[rcode]
+    it = it + 1
 
-print ("Зашифрованное сообщение: " + res)
+print("Зашифрованное сообщение: " + res)
