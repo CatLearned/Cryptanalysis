@@ -18,8 +18,42 @@
 Результаты:
 1. Реализовано (KeyCrDcr) Шифрование с ключом.
 2. Реализован поиск простых чисел (Неоптимальный). (Произведен сбор простых чисел)
+3. Реализовано Шифрование, Расшифрование и взлом шифра Цезаря.
 
 Описание модулей:
+
+Пример работы Дешифрования шифра Цезаря. Без частотного анализа.
+
+```
+Шифр Цезаря (Расшифрование)
+-> Введите шифротекст: ZWDDGEQXJAWFV
+Ключ: A Сообщение: ZWDDGEQXJAWFV
+Ключ: B Сообщение: YVCCFDPWIZVEU
+Ключ: C Сообщение: XUBBECOVHYUDT
+Ключ: D Сообщение: WTAADBNUGXTCS
+Ключ: E Сообщение: VSZZCAMTFWSBR
+Ключ: F Сообщение: URYYBZLSEVRAQ
+Ключ: G Сообщение: TQXXAYKRDUQZP
+Ключ: H Сообщение: SPWWZXJQCTPYO
+Ключ: I Сообщение: ROVVYWIPBSOXN
+Ключ: J Сообщение: QNUUXVHOARNWM
+Ключ: K Сообщение: PMTTWUGNZQMVL
+Ключ: L Сообщение: OLSSVTFMYPLUK
+Ключ: M Сообщение: NKRRUSELXOKTJ
+Ключ: N Сообщение: MJQQTRDKWNJSI
+Ключ: O Сообщение: LIPPSQCJVMIRH
+Ключ: P Сообщение: KHOORPBIULHQG
+Ключ: Q Сообщение: JGNNQOAHTKGPF
+Ключ: R Сообщение: IFMMPNZGSJFOE
+Ключ: S Сообщение: HELLOMYFRIEND
+Ключ: T Сообщение: GDKKNLXEQHDMC
+Ключ: U Сообщение: FCJJMKWDPGCLB
+Ключ: V Сообщение: EBIILJVCOFBKA
+Ключ: W Сообщение: DAHHKIUBNEAJZ
+Ключ: X Сообщение: CZGGJHTAMDZIY
+Ключ: Y Сообщение: BYFFIGSZLCYHX
+Ключ: Z Сообщение: AXEEHFRYKBXGW
+```
 .............
 
 # Заметка (Простые числа): 

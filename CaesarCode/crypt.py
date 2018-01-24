@@ -1,8 +1,7 @@
-# Не тестировано!!!
 import modularArithmetic
 import alpEng
 
-print("Шифр Цезаря")
+print("Шифр Цезаря (Шифрование)")
 mesg = input('-> Введите сообщение: ')
 mesg = mesg.upper().replace(' ', '')
 key = input('-> Ключ символ: ')
