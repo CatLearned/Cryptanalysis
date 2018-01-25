@@ -1,5 +1,5 @@
 import modularArithmetic
-import alpEng
+from Alphabets import alpEng
 
 print("Шифр Цезаря (Шифрование)")
 mesg = input('-> Введите сообщение: ')
