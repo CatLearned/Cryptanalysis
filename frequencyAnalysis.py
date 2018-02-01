@@ -1,25 +1,31 @@
 from math import log10
 
-def quadAnalysis(mesgArr):
-    statsquad = {}
-    f = open('../Alphabets/quadEng.txt', 'r')
+Types = {1: "../Alphabets/monoEng.txt", 2: "../Alphabets/biEng.txt", 
+         3: "../Alphabets/triEng.txt", 4: "../Alphabets/quadEng.txt"}
+
+def freqAnalysis(mesgArr, type):
+    '''
+    Описание функции, неинтерпретируемый код
+    '''
+    freqStats = {}
+    f = open(Types[type], 'r')
     for line in f:
-        quad, count = line.split(' ')
-        statsquad[quad] = int(count)
+        textValue, count = line.split(' ')
+        freqStats[textValue] = int(count)
     itter = 0
     while itter < len(mesgArr):
         mesg = mesgArr[itter].message
-        if len(mesg) < 4:
+        if len(mesg) < type:
             mesgArr[itter].frqnc = ':Анализ невозможен'
         else:
             res = 0
-            counter = 4
-            summquad = sum(statsquad.values())
+            counter = type
+            summquad = sum(freqStats.values())
             while counter <= len(mesg):
                 buff = mesg
-                buff = buff[counter - 4: counter]
-                if buff in statsquad:
-                    res = res + log10(float(statsquad[buff])/summquad)
+                buff = buff[counter - type: counter]
+                if buff in freqStats:
+                    res = res + log10(float(freqStats[buff])/summquad)
                 else:
                     res = res + log10(0.01 / summquad)
                 counter = counter + 1

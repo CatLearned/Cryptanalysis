@@ -4,6 +4,7 @@ from Alphabets import alpEng
 from operator import attrgetter
 
 
+
 class CryptRes:
     def __init__(self, key, message, frqnc):
         self.key = key
@@ -14,6 +15,7 @@ class CryptRes:
 print("Шифр Цезаря (Расшифрование)")
 mesg = input('-> Введите шифротекст: ')
 mesg = mesg.upper().replace(' ', '')
+typeAnaliz = int(input("Введите тип анализа"))
 
 slength = len(mesg)
 keycode = 0
@@ -29,7 +31,7 @@ while not keycode == alpEng.Length:
     decryptmsg.append(CryptRes(alpEng.Dic[keycode], res, 0))
     keycode = keycode + 1
 
-frequencyAnalysis.quadAnalysis(decryptmsg)
+frequencyAnalysis.freqAnalysis(decryptmsg, typeAnaliz)
 print("Возможные ключи, сортировка по вероятности: ")
 decryptmsg = sorted(decryptmsg, key=attrgetter('frqnc'), reverse=True)
 for lineRes in decryptmsg:

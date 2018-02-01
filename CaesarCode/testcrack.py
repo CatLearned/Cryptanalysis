@@ -13,6 +13,7 @@ class CryptRes:
 print("Шифр Цезаря (Шифрование-тест)")
 mesg = input('-> Введите сообщение: ')
 mesg = mesg.upper().replace(' ', '')
+typeAnaliz = int(input("-> Введите тип анализа: "))
 key = random.randint(1, alpEng.Length)
 print(alpEng.Dic[key])
 it = 0
@@ -35,7 +36,7 @@ while not keycode == alpEng.Length:
     decryptmsg.append(CryptRes(alpEng.Dic[keycode], res, 0))
     keycode = keycode + 1
 
-frequencyAnalysis.quadAnalysis(decryptmsg)
+frequencyAnalysis.freqAnalysis(decryptmsg, typeAnaliz)
 print("Возможные ключи, сортировка по вероятности: ")
 decryptmsg = sorted(decryptmsg, key=attrgetter('frqnc'), reverse=True)
 for lineRes in decryptmsg:
