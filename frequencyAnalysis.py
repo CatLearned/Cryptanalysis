@@ -15,7 +15,7 @@ def freqAnalysis(mesgArr, type):
     itter = 0
     while itter < len(mesgArr):
         mesg = mesgArr[itter].message
-        if len(mesg) < type:
+        if len(mesg) < type or type == 0:
             mesgArr[itter].frqnc = ':Анализ невозможен'
         else:
             res = 0

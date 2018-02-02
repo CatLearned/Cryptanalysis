@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3bfd665e-100c-45cb-909f-557c91dc8a32" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/CaesarCode/crypt.py" afterPath="$PROJECT_DIR$/CaesarCode/crypt.py" />
-      <change beforePath="$PROJECT_DIR$/CaesarCode/decrypt.py" afterPath="$PROJECT_DIR$/CaesarCode/decrypt.py" />
+      <change beforePath="$PROJECT_DIR$/CaesarCode/bruteforce.py" afterPath="$PROJECT_DIR$/CaesarCode/bruteforce.py" />
+      <change beforePath="$PROJECT_DIR$/frequencyAnalysis.py" afterPath="$PROJECT_DIR$/frequencyAnalysis.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="crypt.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="crypt.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CaesarCode/crypt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+            <state relative-caret-position="51">
+              <caret line="3" column="41" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -34,11 +34,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="decrypt.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CaesarCode/decrypt.py">
+      <file leaf-file-name="frequencyAnalysis.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frequencyAnalysis.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
+            <state relative-caret-position="289">
+              <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bruteforce.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CaesarCode/bruteforce.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="38" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="testcrack.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CaesarCode/testcrack.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -47,8 +69,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CaesarCode/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state relative-caret-position="500">
+              <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -90,14 +112,14 @@
         <option value="$PROJECT_DIR$/simple/simpleint.py" />
         <option value="$PROJECT_DIR$/Alphabets/quadEng.txt" />
         <option value="$PROJECT_DIR$/FrequencyAnalysis" />
-        <option value="$PROJECT_DIR$/frequencyAnalysis.py" />
-        <option value="$PROJECT_DIR$/CaesarCode/bruteforce.py" />
         <option value="$PROJECT_DIR$/CaesarCode/testcrack.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/CaesarCode/README.md" />
-        <option value="$PROJECT_DIR$/CaesarCode/main.py" />
         <option value="$PROJECT_DIR$/CaesarCode/crypt.py" />
         <option value="$PROJECT_DIR$/CaesarCode/decrypt.py" />
+        <option value="$PROJECT_DIR$/frequencyAnalysis.py" />
+        <option value="$PROJECT_DIR$/CaesarCode/bruteforce.py" />
+        <option value="$PROJECT_DIR$/CaesarCode/main.py" />
       </list>
     </option>
   </component>
@@ -587,16 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaesarCode/testcrack.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/simple/simpleint.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -626,24 +638,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaesarCode/bruteforce.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frequencyAnalysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CaesarCode/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -660,6 +654,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CaesarCode/decrypt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="41" lean-forward="true" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaesarCode/crypt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="41" lean-forward="true" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Alphabets/alpEng.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -668,26 +678,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/frequencyAnalysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CaesarCode/bruteforce.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CaesarCode/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state relative-caret-position="500">
+          <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CaesarCode/decrypt.py">
+    <entry file="file://$PROJECT_DIR$/CaesarCode/testcrack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CaesarCode/crypt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        <state relative-caret-position="51">
+          <caret line="16" column="27" lean-forward="false" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
           <folding />
         </state>
       </provider>
