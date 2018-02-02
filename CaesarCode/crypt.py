@@ -1,10 +1,6 @@
 import modularArithmetic
 
 
-# from Alphabets import alpEng as ALPHABET
-
-# { "Eng" : from Alphabets import alpEng as ALPHABET}
-
 def CRYPTION_CEASAR(TEXT, LANGUAGE, KEY):
     if (LANGUAGE == 'eng'):
         from Alphabets import alpEng as ALPHABET
@@ -32,7 +28,5 @@ def CRYPTION_CEASAR(TEXT, LANGUAGE, KEY):
 
 print("Шифр Цезаря (Шифрование)")
 mesg = input('-> Введите сообщение: ')
-mesg = mesg.upper().replace(' ', '')
 key = input('-> Ключ символ: ')
-key = key[0].upper()
-print("Зашифрованное сообщение: " + CRYPTION_CEASAR(mesg, key, 'eng'))
+print("Зашифрованное сообщение: " + CRYPTION_CEASAR(mesg, 'eng', key))
