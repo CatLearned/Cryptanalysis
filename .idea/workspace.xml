@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3bfd665e-100c-45cb-909f-557c91dc8a32" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/CaesarCode/testcrack.py" afterPath="$PROJECT_DIR$/CaesarCode/testcrack.py" />
-    </list>
+    <list default="true" id="3bfd665e-100c-45cb-909f-557c91dc8a32" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -70,8 +68,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CaesarCode/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+            <state relative-caret-position="170">
+              <caret line="10" column="47" lean-forward="true" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -119,8 +117,8 @@
         <option value="$PROJECT_DIR$/CaesarCode/decrypt.py" />
         <option value="$PROJECT_DIR$/frequencyAnalysis.py" />
         <option value="$PROJECT_DIR$/CaesarCode/bruteforce.py" />
-        <option value="$PROJECT_DIR$/CaesarCode/main.py" />
         <option value="$PROJECT_DIR$/CaesarCode/testcrack.py" />
+        <option value="$PROJECT_DIR$/CaesarCode/main.py" />
       </list>
     </option>
   </component>
@@ -709,8 +707,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CaesarCode/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="55" column="36" lean-forward="false" selection-start-line="55" selection-start-column="36" selection-end-line="55" selection-end-column="36" />
+        <state relative-caret-position="170">
+          <caret line="10" column="47" lean-forward="true" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
           <folding />
         </state>
       </provider>
