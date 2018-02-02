@@ -1,8 +1,9 @@
 import modularArithmetic
 import random
 import frequencyAnalysis
-from Alphabets import alpEng
 from operator import attrgetter
+from CaesarCode import crypt
+from CaesarCode import bruteforce
 
 class CryptRes:
     def __init__(self, key, message, frqnc):
@@ -10,34 +11,30 @@ class CryptRes:
         self.message = message
         self.frqnc = frqnc
 
+def TEST_CRACK_CEASAR(TEXT, LANGUAGE, TYPE):
+    if (LANGUAGE == 'eng'):
+        from Alphabets import alpEng as ALPHABET
+    else:
+        return "Неверный алфавит!"
+    if int(TYPE) < 5 or int(TYPE) >= 0:
+        type = int(TYPE)
+    else:
+        return "Неверный тип частотного анализа!"
+    mesg = TEXT.upper().replace(' ', '')
+    key = random.randint(1, ALPHABET.Length)
+    try:
+        keycode = ALPHABET.Dic[key]
+    except:
+        return "Ошибка генерации ключа "
+    # Обязательно переделать!!!
+    print("Случайный ключ: " + keycode)
+    newmesg = crypt.CRYPTION_CEASAR(mesg, LANGUAGE, key)
+    print("Зашифрованое сообщение: " + newmesg)
+    return bruteforce.CRACK_CEASAR(newmesg, LANGUAGE, type)
+
 print("Шифр Цезаря (Шифрование-тест)")
 mesg = input('-> Введите сообщение: ')
-mesg = mesg.upper().replace(' ', '')
 typeAnaliz = int(input("-> Введите тип анализа: "))
-key = random.randint(1, alpEng.Length)
-print(alpEng.Dic[key])
-it = 0
-codedMsg = ''
-while not it == len(mesg):
-    scode = alpEng.Alp[mesg[it]]
-    rcode = modularArithmetic.modularsumm(scode, key, alpEng.Length)
-    codedMsg = codedMsg + alpEng.Dic[rcode]
-    it = it + 1
-keycode = 0
-decryptmsg = []
-while not keycode == alpEng.Length:
-    it = 0
-    res = ''
-    while not it == len(codedMsg):
-        scode = alpEng.Alp[codedMsg[it]]
-        rcode = modularArithmetic.modulardec(scode, keycode, alpEng.Length)
-        res = res + alpEng.Dic[rcode]
-        it = it + 1
-    decryptmsg.append(CryptRes(alpEng.Dic[keycode], res, 0))
-    keycode = keycode + 1
-
-frequencyAnalysis.freqAnalysis(decryptmsg, typeAnaliz)
-print("Возможные ключи, сортировка по вероятности: ")
-decryptmsg = sorted(decryptmsg, key=attrgetter('frqnc'), reverse=True)
-for lineRes in decryptmsg:
-    print(lineRes.key + " " + lineRes.message + " " + str(lineRes.frqnc))
+print(TEST_CRACK_CEASAR(mesg, 'eng', typeAnaliz))
+#for lineRes in decryptmsg:
+#    print(lineRes.key + " " + lineRes.message + " " + str(lineRes.frqnc))
