@@ -8,18 +8,14 @@ def cli():
 
 
 @click.command()
-# @click.option('--type', '-t', default = 'ct',
-#              help = 'The parameter is responsible for specifying the type of program operation. '
-#                     'The parameter can take four values: ct - encryption, dct - decryption, '
-#                     'crack - hacking, tcrack - hack algorithm test')
 @click.option('--text', '-txt', default='HELLO MY CRYPTOFRIEND',
               help='The text with which the operation will be performed')
 @click.option('--lang', '-l', default='eng', help='Source language')
 @click.option('--key', '-k', default='A', help='Encryption key')
 def crypt(text, lang, key):
-    print("Шифрование")
+    #print("Шифрование")
     from CaesarCode import crypt
-    print(crypt.CRYPTION_CEASAR(text, key, lang))
+    print(crypt.CRYPTION_CEASAR(text, lang, key))
 
 
 @click.command()
@@ -28,9 +24,9 @@ def crypt(text, lang, key):
 @click.option('--lang', '-l', default='eng', help='Source language')
 @click.option('--key', '-k', default='A', help='Decryption key')
 def decrypt(text, lang, key):
-    print("Дешифрование")
-    from CaesarCode import crypt
-    print(crypt.CRYPTION_CEASAR(text, key, lang))
+    #print("Дешифрование")
+    from CaesarCode import decrypt
+    print(decrypt.DECRYPTION_CEASAR(text, lang, key))
 
 
 @click.command()
@@ -40,7 +36,7 @@ def decrypt(text, lang, key):
 @click.option('--type', '-t', default='1', help='Type of Frequency analise: 0-without analise, 1-monogramms, '
                                                 '2-bigramms, 3-trigramms, 4-quadgramms')
 def crack(text, lang, type):
-    print("Взлом")
+    #print("Взлом")
     from CaesarCode import bruteforce
     print(bruteforce.CRACK_CEASAR(text, lang, type))
 
@@ -52,9 +48,9 @@ def crack(text, lang, type):
 @click.option('--type', '-t', default='1', help='Type of Frequency analise: 0-without analise, 1-monogramms, '
                                                 '2-bigramms, 3-trigramms, 4-quadgramms')
 def testcrack(text, lang, type):
-    print("Взлом")
+    #print("Взлом-тест")
     from CaesarCode import testcrack
-    print(testcrack.CRACK_CEASAR(text, lang, type))
+    print(testcrack.TEST_CRACK_CEASAR(text, lang, type))
 
 
 cli.add_command(crypt)

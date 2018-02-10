@@ -24,9 +24,3 @@ def CRYPTION_CEASAR(TEXT, LANGUAGE, KEY):
         res = res + ALPHABET.Dic[rcode]
         it = it + 1
     return res
-
-
-print("Шифр Цезаря (Шифрование)")
-mesg = input('-> Введите сообщение: ')
-key = input('-> Ключ символ: ')
-print("Зашифрованное сообщение: " + CRYPTION_CEASAR(mesg, 'eng', key))

@@ -1,5 +1,5 @@
 from math import log10
-
+# Необходимо расширение для Других языков, в данном случае идёт жесткая привязка к английскому словарю
 Types = {1: "../Alphabets/monoEng.txt", 2: "../Alphabets/biEng.txt", 
          3: "../Alphabets/triEng.txt", 4: "../Alphabets/quadEng.txt"}
 
@@ -16,7 +16,7 @@ def freqAnalysis(mesgArr, type):
     while itter < len(mesgArr):
         mesg = mesgArr[itter].message
         if len(mesg) < type or type == 0:
-            mesgArr[itter].frqnc = ':Анализ невозможен'
+            mesgArr[itter].frqnc = ': Анализ невозможен'
         else:
             res = 0
             counter = type

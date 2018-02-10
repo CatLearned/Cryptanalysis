@@ -27,9 +27,3 @@ def DECRYPTION_CEASAR(TEXT, LANGUAGE, KEY):
             return "Ошибка обратной конвертации "
         it = it + 1
     return res
-
-
-print("Шифр Цезаря (Расшифрование)")
-mesg = input('-> Введите шифротекст: ')
-key = input('-> Ключ символ: ')
-print("Дешифрованное сообщение: " + DECRYPTION_CEASAR(mesg, "eng", key))

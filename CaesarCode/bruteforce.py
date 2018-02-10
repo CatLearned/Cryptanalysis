@@ -1,7 +1,5 @@
 import modularArithmetic
 import frequencyAnalysis
-from operator import attrgetter
-
 
 
 class CryptRes:
@@ -9,6 +7,7 @@ class CryptRes:
         self.key = key
         self.message = message
         self.frqnc = frqnc
+
 
 def CRACK_CEASAR(TEXT, LANGUAGE, TYPE):
     if (LANGUAGE == 'eng'):
@@ -34,16 +33,16 @@ def CRACK_CEASAR(TEXT, LANGUAGE, TYPE):
         decryptmsg.append(CryptRes(ALPHABET.Dic[keycode], res, 0))
         keycode = keycode + 1
 
-    frequencyAnalysis.freqAnalysis(decryptmsg, typeAnaliz)
-
-
-
-
-print("Шифр Цезаря (Расшифрование)")
-mesg = input('-> Введите шифротекст: ')
-typeAnaliz = int(input("Введите тип анализа"))
-
-print("Возможные ключи, сортировка по вероятности: ")
-print(CRACK_CEASAR(mesg, 'eng', typeAnaliz))
-#for lineRes in decryptmsg:
-#    print(lineRes.key + " " + lineRes.message + " " + str(lineRes.frqnc))
+    if type == 0:
+        resString = ""
+        for buff in decryptmsg:
+            resString += buff.key + " " + buff.message + "\n"
+    else:
+        reList = sorted(frequencyAnalysis.freqAnalysis(decryptmsg, type), key=lambda x: x.frqnc, reverse=True)
+        if reList == None:
+            return "Ошибка Подбора"
+        else:
+            resString = ""
+            for lineRes in reList:
+                resString += lineRes.key + " " + lineRes.message + " " + str(lineRes.frqnc) + "\n"
+            return resString
