@@ -33,7 +33,7 @@ def decrypt(text, lang, key):
 @click.option('--text', '-txt', default='HELLO MY CRYPTOFRIEND',
               help='The text with which the operation will be performed')
 @click.option('--lang', '-l', default='eng', help='Source language')
-@click.option('--type', '-t', default='1', help='Type of Frequency analise: 0-without analise, 1-monogramms, '
+@click.option('--type', '-t', default='0', help='Type of Frequency analise: 0-without analise, 1-monogramms, '
                                                 '2-bigramms, 3-trigramms, 4-quadgramms')
 def crack(text, lang, type):
     #print("Взлом")

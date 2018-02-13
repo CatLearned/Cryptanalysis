@@ -37,6 +37,7 @@ def CRACK_CEASAR(TEXT, LANGUAGE, TYPE):
         resString = ""
         for buff in decryptmsg:
             resString += buff.key + " " + buff.message + "\n"
+        return resString
     else:
         reList = sorted(frequencyAnalysis.freqAnalysis(decryptmsg, type), key=lambda x: x.frqnc, reverse=True)
         if reList == None:
