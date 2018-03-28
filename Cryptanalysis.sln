@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Cryptanalysis", "Cryptanalysis.pyproj", "{E6825465-77D5-40D1-9D1B-75EFA4251A53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6825465-77D5-40D1-9D1B-75EFA4251A53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6825465-77D5-40D1-9D1B-75EFA4251A53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF4A8F20-DB53-4F0E-886A-0A92BFE83C27}
+	EndGlobalSection
+EndGlobal
