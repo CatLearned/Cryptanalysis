@@ -1,6 +1,5 @@
-from CaesarCode import keyobj
-from CaesarCode import errorobj
-import modularArithmetic
+from Primitives import keyobj, errorobj
+
 
 # Объект сообщение обладает полями:
 # 1. Сообщение
@@ -17,13 +16,13 @@ class Message:
         if(aer.iserror == 0):
             itter = 0
             while itter < len(self.mes):
-                self.mes[itter] = modularArithmetic.modularsumm()
-
+                #self.mes[itter] = modularArithmetic.modularsumm()
+                return 0 # Nothing
 
     def __sub__(self, other):
         if type(other) is keyobj.Key:
             if (self.lang == other.lang):
-
+                return 0 # Nothing
             else:
                 return -1 # Ошибка
         else:
@@ -42,7 +41,3 @@ class Message:
             er.iserror = 1
             er.description = "Второй операнд не ключ"
         return er  # Ошибка
-
-    def getSymbolCode(self, num):
-
-    def getSymbol
