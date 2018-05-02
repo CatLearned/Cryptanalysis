@@ -1,4 +1,4 @@
-import modularArithmetic
+from Primitives import modularArithmetic
 import frequencyAnalysis
 
 
@@ -11,7 +11,7 @@ class CryptRes:
 
 def CRACK_CEASAR(TEXT, LANGUAGE, TYPE):
     if (LANGUAGE == 'eng'):
-        from Alphabets import alpEng as ALPHABET
+        from Alphabets.English import Alphabet as ALPHABET
     else:
         return "Неверный алфавит!"
     if int(TYPE) < 5 or int(TYPE) >= 0:

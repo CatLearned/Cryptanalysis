@@ -1,7 +1,7 @@
 from math import log10
 # Необходимо расширение для Других языков, в данном случае идёт жесткая привязка к английскому словарю
-Types = {1: "../Alphabets/monoEng.txt", 2: "../Alphabets/biEng.txt", 
-         3: "../Alphabets/triEng.txt", 4: "../Alphabets/quadEng.txt"}
+Types = {1: "../Alphabets/English/monoEng.txt", 2: "../Alphabets/English/biEng.txt",
+         3: "../Alphabets/English/triEng.txt", 4: "../Alphabets/English/quadEng.txt"}
 
 def freqAnalysis(mesgArr, type):
     '''

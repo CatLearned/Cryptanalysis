@@ -1,9 +1,9 @@
-import modularArithmetic
+from Primitives import modularArithmetic
 
 
 def DECRYPTION_CEASAR(TEXT, LANGUAGE, KEY):
     if (LANGUAGE == 'eng'):
-        from Alphabets import alpEng as ALPHABET
+        from Alphabets.English import Alphabet as ALPHABET
     else:
         return "Неверный алфавит!"
     mesg = TEXT.upper().replace(' ', '')
