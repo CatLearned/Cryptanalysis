@@ -1,6 +1,6 @@
 # cli.py
 import click
-
+from Primitives import messageobj, keyobj
 
 @click.group()
 def cli():
@@ -15,7 +15,11 @@ def cli():
 def crypt(text, lang, key):
     #print("Шифрование")
     from CaesarCode import crypt
-    print(crypt.CRYPTION_CEASAR(text, lang, key))
+    mtext = text.upper().replace(' ', '')
+    ktext = key.upper().replace(' ', '')
+    mes = messageobj.Message(mtext, lang)
+    mkey = keyobj.Key(ktext, lang)
+    print(crypt.CRYPTION_CEASAR(mes, mkey).mes)
 
 
 @click.command()
@@ -26,7 +30,11 @@ def crypt(text, lang, key):
 def decrypt(text, lang, key):
     #print("Дешифрование")
     from CaesarCode import decrypt
-    print(decrypt.DECRYPTION_CEASAR(text, lang, key))
+    mtext = text.upper().replace(' ', '')
+    ktext = key.upper().replace(' ', '')
+    mes = messageobj.Message(mtext, lang)
+    mkey = keyobj.Key(ktext, lang)
+    print(decrypt.DECRYPTION_CEASAR(mes, mkey).mes)
 
 
 @click.command()

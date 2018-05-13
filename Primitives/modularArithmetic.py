@@ -5,4 +5,4 @@ def modularsumm(symcode, keycode, alength):
 
 # Модульная разность
 def modulardec(symcode, keycode, alength):
-    return ((symcode - keycode) + alength) % alength
+    return (symcode - keycode) % alength

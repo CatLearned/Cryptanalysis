@@ -13,40 +13,48 @@ class Message:
 
     # Прибавление ключа
     def __add__(self, other):
-        er = self.checkStatus(self, other);
+        res = Message(self.mes, self.lang)
+        er = self.checkStatus(other);
         if(er.iserror == 0):
             bufAlp = SymbolsAlg.importAlphsbet(self.lang)
             if bufAlp != 0:
                 itter = 0
                 lengthControl = 0
+                bufstr = ""
                 while itter < len(self.mes):
-                    if lengthControl >= len(other.Key):
+                    if lengthControl >= len(other.key):
                         lengthControl = 0
-                    self.mes[itter] = modularArithmetic.modularsumm(self.mes[itter], other.Key[lengthControl], bufAlp.Length)
+                    bufstr = bufstr + SymbolsAlg.getSymbolByCode(modularArithmetic.modularsumm(SymbolsAlg.getCodeBySymbol(self.mes[itter], self.lang), SymbolsAlg.getCodeBySymbol(other.key[lengthControl], self.lang), bufAlp.Length), self.lang)
                     lengthControl = lengthControl + 1
                     itter = itter + 1
+                res.mes = bufstr
+                return res
             else:
-                return 0
-        return 0 # Nothing
+                return res
+        return res # Nothing
 
     # Вычитание ключа
     def __sub__(self, other):
-        er = self.checkStatus(self, other);
+        res = Message(self.mes, self.lang)
+        er = self.checkStatus(other);
         if (er.iserror == 0):
             bufAlp = SymbolsAlg.importAlphsbet(self.lang)
             if bufAlp != 0:
                 itter = 0
                 lengthControl = 0
+                bufstr = ""
                 while itter < len(self.mes):
                     if lengthControl >= len(other.key):
                         lengthControl = 0
-                    self.mes[itter] = modularArithmetic.modulardec(SymbolsAlg.getCodeBySymbol(self.mes[itter], self.lang), (SymbolsAlg.other.key[lengthControl], other.lang),
-                                                                    bufAlp.Length)
+                    bufstr = bufstr + SymbolsAlg.getSymbolByCode(modularArithmetic.modulardec(SymbolsAlg.getCodeBySymbol(self.mes[itter], self.lang), SymbolsAlg.getCodeBySymbol(other.key[lengthControl], other.lang),
+                                                                    bufAlp.Length), self.lang)
                     lengthControl = lengthControl + 1
                     itter = itter + 1
+                res.mes = bufstr
+                return res
             else:
-                return 0
-        return 0  # Nothing
+                return res
+        return res  # Nothing
 
     # Проверка возможности применения ключа
     def checkStatus(self, other):
@@ -64,4 +72,4 @@ class Message:
         return er  # Ошибка
 
     def getMessage(self):
-        return  self.mes
+        return self.mes
