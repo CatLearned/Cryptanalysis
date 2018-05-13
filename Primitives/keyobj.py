@@ -3,8 +3,8 @@
 # 2. Язык сообщения
 
 class Key:
-    def __init__(self, k, lang):
-        self.k = k
+    def __init__(self, key, lang):
+        self.key = key
         self.lang = lang
 
 

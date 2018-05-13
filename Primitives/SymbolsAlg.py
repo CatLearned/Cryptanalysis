@@ -1,12 +1,18 @@
+# Проверяет наличие и передает алфавит в программу
 def importAlphsbet(Lang):
     if Lang == "eng":
         from Alphabets.English import Alphabet as Alphabet
         return Alphabet
     else:
-        return 0
+        if Lang == "rus":
+            from Alphabets.Russian import Alphabet as Alphabet
+            return Alphabet
+        else:
+            return 0
+    return 0
         # Такого алфавита не существует
 
-
+# Получение номера символа
 def getCodeBySymbol(Symbol, Lang):
     bufAlp = importAlphsbet(Lang)
     if bufAlp != 0:
@@ -19,7 +25,7 @@ def getCodeBySymbol(Symbol, Lang):
         return -1
         # Алфавита с заданным языком нет
 
-
+# Получение символа
 def getSymbolByCode(Code, Lang):
     bufAlp = importAlphsbet(Lang)
     if bufAlp != 0:
